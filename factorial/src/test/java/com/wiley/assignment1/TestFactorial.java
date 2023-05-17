@@ -43,12 +43,12 @@ public class TestFactorial {
 	@Test
 	@DisplayName("Calculate the Factorial of 1")
 	public void testCalculateFactorialOfOne() {
-		 
+
 		inputStream = new ByteArrayInputStream("1".getBytes());
 	    byteArrayOutputStream = new ByteArrayOutputStream();
 	    PrintStream ps = new PrintStream(byteArrayOutputStream);
 	    fact = new Factorial(inputStream, ps);
-		
+
 		 //testGetTheInputNumber();
 	     fact.calculateFactorial();
 	     String outputText = byteArrayOutputStream.toString();
@@ -56,7 +56,7 @@ public class TestFactorial {
 	     String output = outputText.substring(outputText.indexOf(key) + key.length()).trim();
 	     //Assertions.assertEquals("720",output);
 	     Assertions.assertEquals("1",output);
-		
+
 	}
 	
 	@Test
